@@ -3,6 +3,8 @@ package com.zij.tbp.services.mongo.models
 import com.zij.tbp.models.{ Book, CoverType, Language }
 import reactivemongo.api.bson.{ BSONDocumentReader, BSONDocumentWriter, BSONObjectID, Macros }
 import io.scalaland.chimney.dsl._
+import cats.implicits._
+import com.zij.tbp.services.graphql.models.BookOutput
 
 import java.time.Instant
 
@@ -34,6 +36,13 @@ case class BookDBO(
        |ISBN: $isbn
        |Author: $author
        |""".stripMargin
+
+  def toBook: Book =
+    this
+      .into[Book]
+      .withFieldComputed(_.language, _.language.map(Language.withNameInsensitive))
+      .withFieldComputed(_.coverType, b => CoverType.withNameInsensitive(b.coverType))
+      .transform
 }
 
 object BookDBO {

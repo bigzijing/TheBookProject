@@ -2,9 +2,8 @@ package com.zij.tbp
 
 import com.github.tototoshi.csv.CSVReader
 import com.zij.tbp.services.mongo.models.BookDBO
-import zio.{ ZIOAppDefault, ZLayer }
+import zio.ZIOAppDefault
 import reactivemongo.zio._
-import zio.Console.{ printLine, readLine }
 import zio.stream.ZStream
 import cats.implicits._
 import com.zij.tbp.models.{ CoverType, Language }

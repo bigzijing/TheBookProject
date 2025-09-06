@@ -3,12 +3,12 @@ organization := "com.zij.tbp"
 
 libraryDependencies ++= Seq(
   "dev.zio"                     %% "zio"                      % "2.1.20",
-  "dev.zio"                     %% "zio-http"                 % "3.0.0-RC1",
+  "dev.zio"                     %% "zio-http"                 % "3.3.2",
   "dev.zio"                     %% "zio-logging"              % "2.5.1",
   "dev.zio"                     %% "zio-logging-slf4j"        % "2.5.1",
   "dev.zio"                     %% "zio-logging-slf4j-bridge" % "2.5.1",
-  "com.github.ghostdogpr"       %% "caliban"                  % "2.2.1",
-  "com.github.ghostdogpr"       %% "caliban-zio-http"         % "2.2.1",
+  "com.github.ghostdogpr"       %% "caliban"                  % "2.11.1",
+  "com.github.ghostdogpr"       %% "caliban-quick"            % "2.11.1",
   "com.softwaremill.sttp.tapir" %% "tapir-json-circe"         % "1.4.0",
   "com.leadiq"                  %% "reactivemongo-zio"        % "2.0.0-RC13",
   "com.beachape"                %% "enumeratum"               % "1.9.0",

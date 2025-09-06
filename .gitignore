@@ -18,6 +18,7 @@ target/
 */project/project
 */project/target
 */target
+*/resources
 
 # eclipse
 build/

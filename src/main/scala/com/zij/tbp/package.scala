@@ -14,7 +14,7 @@ package object tbp {
         for {
           username <- printLine("Enter URL encoded Mongo username") *> readLine
           password <- printLine("Enter URL encoded Mongo password") *> readLine
-        } yield s"mongodb+srv://$username:$password@the-book-project-cluste.oglrs3m.mongodb.net/the-book-project?retryWrites=true&w=majority"
+        } yield s"mongodb+srv://$username:$password@the-book-project-cluste.7xsahya.mongodb.net/the-book-project?retryWrites=true&w=majority"
       )
       .flatMap(s => Mongo.fromConnectionString(s.get))
 
